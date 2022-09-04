@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.pinimg.com/originals/8a/a1/3a/8aa13a421c5bf72fa9a934b42269c9b0.jpg"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Gulliver Traveller</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2>Gulliver Traveller - Cadastro de Pontos Turísticos</h2>
+        <hr />
+      </div>
+
+      <form
+        name="tourist-spot-data"
+        id="tourist-spot-data"
+        action=""
+        method="post"
+        onsubmit="alert('Dados Salvos!')"
+      >
+        <div class="fieldset">
+          <label for="nome">Nome do Ponto Turístico</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder=" Pinacoteca"
+            autofocus
+            required
+          />
+          <hr />
+        </div>
+
+        <div class="fieldset">
+          <h3>Localização:</h3>
+
+          <label for="rua">Rua</label>
+          <input type="text" id="rua" required placeholder=" Av. Paulista" />
+
+          <label for="numero">Número</label>
+          <input type="text" id="numero" required placeholder=" 1234" />
+
+          <label for="bairro">Bairro</label>
+          <input
+            type="text"
+            id="bairro"
+            required
+            placeholder="Cerqueira Cesar"
+          />
+
+          <label for="cep">Cep:</label>
+          <input type="text" id="cep" required placeholder=" 12345-678" />
+
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" required placeholder=" São Paulo" />
+
+          <label for="estados">Estado:</label>
+          <input
+            list="uf"
+            id="estados"
+            class="lista"
+            required
+            placeholder="Selecione o estado"
+          />
+          <datalist id="uf">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </datalist>
+          <hr />
+        </div>
+
+        <div class="fieldset">
+          <h3>Contato:</h3>
+
+          <label for="data">Data do Cadastro</label>
+          <input type="date" id="data" required />
+
+          <label for="telefone">Telefone</label>
+          <input
+            type="tel"
+            id="telefone"
+            required
+            placeholder=" 00-1234-5678"
+          />
+
+          <label for="classificacao">Classificação</label>
+          <input
+            list="classificacao"
+            id="classificacao"
+            class="lista"
+            required
+            placeholder=" Selecione a classificação"
+          />
+          <datalist id="classifica">
+            <option value="1 estrela"></option>
+            <option value="2 estrelas"></option>
+            <option value="3 estrelas"></option>
+            <option value="4 estrelas"></option>
+            <option value="5 estrelas"></option>
+          </datalist>
+          <hr />
+        </div>
+
+        <div class="fieldset">
+          <h3>Outras informações:</h3>
+          <label for="valor">Valor do ingresso</label>
+          <input type="number" id="valor" required placeholder=" 200.00" />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="pinacoteca@pinacoteca.org.br "
+          />
+
+          <label for="site">Site</label>
+          <input
+            type="url"
+            id="site"
+            required
+            placeholder="https://pinacoteca.org.br"
+          />
+
+          <label for="informacoes">Mais informações</label>
+          <textarea
+            name=""
+            id="informacoes"
+            placeholder="Informações adicionais"
+          ></textarea>
+          <hr />
+        </div>
+
+        <div class="buttons">
+          <input class="clear" type="reset" value="Limpar" />
+          <input class="save" type="submit" value="Salvar" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
